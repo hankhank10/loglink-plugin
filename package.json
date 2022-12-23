@@ -1,0 +1,25 @@
+{
+  "name": "logseq-spotify-integration",
+  "version": "0.0.2",
+  "description": "Displays the tracks you have listened to on Spotify in your log using a slash command",
+  "author": "hankhank10",
+  "main": "dist/index.html",
+  "targets": {
+    "main": false
+  },
+  "scripts": {
+    "build": "parcel build --no-source-maps src/index.html --public-url ./"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@logseq/libs": "latest"
+  },
+  "logseq": {
+    "id": "logspot-spotify",
+    "title": "Spotify Integration",
+    "icon": "./icon.png"
+  },
+  "devDependencies": {
+    "parcel": "latest"
+  }
+}
