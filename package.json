@@ -12,7 +12,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@logseq/libs": "latest"
+    "@logseq/libs": "latest",
+    "watch": "^1.0.2"
   },
   "logseq": {
     "id": "logspot-whatsapp",
