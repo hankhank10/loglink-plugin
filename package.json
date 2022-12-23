@@ -1,7 +1,7 @@
 {
-  "name": "logseq-spotify-integration",
-  "version": "0.0.2",
-  "description": "Displays the tracks you have listened to on Spotify in your log using a slash command",
+  "name": "logseq-whatsapp-integration",
+  "version": "0.0.1",
+  "description": "Allows you to add to your LogSeq graph from WhatsApp",
   "author": "hankhank10",
   "main": "dist/index.html",
   "targets": {
@@ -15,8 +15,8 @@
     "@logseq/libs": "latest"
   },
   "logseq": {
-    "id": "logspot-spotify",
-    "title": "Spotify Integration",
+    "id": "logspot-whatsapp",
+    "title": "Whatsapp Integration",
     "icon": "./icon.png"
   },
   "devDependencies": {
