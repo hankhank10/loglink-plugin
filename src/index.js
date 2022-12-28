@@ -84,17 +84,29 @@ async function displayWhatsappData() {
 	if (data.length === 0) {
 		logseq.UI.showMsg(`
         	[:div.p-2
-        		[:h1 "No new messages found"]
+        		[:h1 "No new messages found on LogLink"]
         	]
-    	`);
+    	`,
+		'warning');
 	} else {
+		logseq.UI.showMsg(`
+        	[:div.p-2
+        		[:h1 "Imported ` + data.length + ` messages from LogLink successfully"]
+        	]
+    	`,
+		'success');
+
 		logseq.Editor.updateBlock(targetBlockUuid, "Imported from [[LogLink]]:");
+
+		// Iterate through the data and insert each item into the current block
+		data.forEach(function (item, index) {
+			logseq.Editor.insertBlock(targetBlockUuid, item);
+		});
+
+		// and then add another blank to the end
+		logseq.Editor.insertBlock(targetBlockUuid, "");
 	}
-	
-	// Iterate through the data and insert each item into the current block
-	data.forEach(function (item, index) {
-		logseq.Editor.insertBlock(targetBlockUuid, item);
-	});
+
 }
 
 
