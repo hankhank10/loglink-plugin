@@ -10,7 +10,7 @@ const pluginName = "Whatsapp plugin: "
 async function loadWhatsappData() {
 
 	const appURL = 'https://api.loglink.it';
-	const userID = logseq.settings["LogLink"];
+	const userID = logseq.settings["loglink_token"];
 	const endpoint = appURL + '/get_new_messages/';
 
 	let results_array = [];
