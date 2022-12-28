@@ -1,17 +1,25 @@
-## LogSeq Spotify integration
+## LogLink integration
 
-Displays the tracks you have listened to on Spotify in your log using the slash command `/spotify`.
+Loglink allows you to send data to your LogSeq graph from a variety of sources.
+
+Currently integrated:
+- WhatsApp
+
+Planned:
+- Telegram
+- Email
+- Discord
+- Twitter
 
 ![Alt Text](video_demo.gif)
-
 
 ## Usage
 
 1. Install the plugin
-2. Visit https://spotify.logspot.top/ and click the button to authenticate with Spotify
-3. Once you have authenticated with Spotify you will be provided with a token (a string of letters and numbers)
+2. Visit https://loglink.it/ and follow the instructions to integrate with your choice of source
+3. Once you have authenticated you will be provided with a token (a string of letters and numbers)
 4. Copy that token and paste it into the "Settings" page of this plugin
-5. Use the slash command `/spotify` to display your Spotify listening history
+5. Use the slash command `/loglink` to display your Spotify listening history
 
 
 
