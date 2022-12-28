@@ -9,7 +9,7 @@ const pluginName = "Whatsapp plugin: "
 /* function to fetch data from LogWhat */
 async function loadWhatsappData() {
 
-	const appURL = 'http://127.0.0.1:5001';
+	const appURL = 'https://whatsapp.logspot.top';
 	const userID = logseq.settings["LogWhatToken"];
 	const endpoint = appURL + '/get_new_messages/';
 
