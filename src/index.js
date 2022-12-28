@@ -9,16 +9,16 @@ const pluginName = "Whatsapp plugin: "
 /* function to fetch data from LogWhat */
 async function loadWhatsappData() {
 
-	const appURL = 'https://whatsapp.logspot.top';
-	const userID = logseq.settings["LogWhatToken"];
+	const appURL = 'https://api.loglink.it';
+	const userID = logseq.settings["LogLink"];
 	const endpoint = appURL + '/get_new_messages/';
 
 	let results_array = [];
 
 	if (userID === "") {
 		results_array.push("This plugin has not yet been initialised.")
-		results_array.push("In order to use this plugin, you must first authenticate with Whatsapp by visiting " + appURL);
-		results_array.push("Once you have authenticated, you will be given a token (a long string of letters and numbers). Enter that token in the LogWhat plugin settings.");
+		results_array.push("In order to use this plugin, you must first authenticate with LogLink by visiting " + appURL);
+		results_array.push("Once you have authenticated, you will be given a token (a long string of letters and numbers). Enter that token in the LogLink plugin settings.");
 		return results_array
 	}
 
@@ -52,7 +52,7 @@ async function loadWhatsappData() {
 		});
 
 	} else {
-		results_array.push("There was an error fetching your data from logspot. Error code was " + status + ".");
+		results_array.push("There was an error fetching your data from LogLink. Error code was " + status + ".");
 		results_array.push(data.message)
 		console.log(data);
 	}
@@ -62,14 +62,11 @@ async function loadWhatsappData() {
 
 async function displayWhatsappData() {
 
-	console.log("displayWhatsappData called")
-
-	//const {content, uuid} = await logseq.Editor.getCurrentBlock();
 
 	// Display the toast
 	logseq.UI.showMsg(`
         [:div.p-2
-          [:h1 "Fetching from Whatsapp..."]
+          [:h1 "Fetching from LogLink..."]
         ]
     `);
 	console.log(`#${pluginId}: fetching`);
@@ -91,7 +88,7 @@ async function displayWhatsappData() {
         	]
     	`);
 	} else {
-		logseq.Editor.updateBlock(targetBlockUuid, "Imported from Whatsapp:");
+		logseq.Editor.updateBlock(targetBlockUuid, "Imported from [[LogLink]]:");
 	}
 	
 	// Iterate through the data and insert each item into the current block
@@ -113,14 +110,14 @@ const main = async () => {
 	:
 		main`); /* -plugin-id */
 
-	logseq.Editor.registerSlashCommand('📱 Recent messages from WhatsApp', async () => {
+	logseq.Editor.registerSlashCommand('🔄 LogLink messages', async () => {
 			displayWhatsappData()
 		}
 	);
 
-	logseq.Editor.registerBlockContextMenuItem('📱 Whatsapp integration',
+	logseq.Editor.registerBlockContextMenuItem('🔄 LogLink integration',
 		({blockId}) => {
-			logseq.UI.showMsg('📱 Whatsapp integration')
+			logseq.UI.showMsg('🔄LogLink integration')
 		}
 	);
 	

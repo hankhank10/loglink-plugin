@@ -2,10 +2,10 @@ export const settingUI = () => {
     /* https://logseq.github.io/plugins/types/SettingSchemaDesc.html */
     const settingsTemplate = [
         {
-            key: "LogWhatToken",
+            key: "LogLink token",
             type: "string",
-            title: "Your LogWhat Token",
-            description: "To link with Whatsapp, visit https://whatsapp.logspot.top/  Once you authenticate with LogWhat, the site will generate a token. Enter it below.",
+            title: "Your LogLink Token",
+            description: "To link with LogLink, visit https://loglink.it/  Once you authenticate with LogLink, the site will generate a token. Enter it below.",
             default: ""
         },
     ];

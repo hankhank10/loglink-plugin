@@ -1,7 +1,7 @@
 {
-  "name": "logseq-whatsapp-integration",
+  "name": "loglink-integration",
   "version": "0.0.1",
-  "description": "Allows you to add to your LogSeq graph from WhatsApp",
+  "description": "Allows you to add to your LogSeq graph from LogLink",
   "author": "hankhank10",
   "main": "dist/index.html",
   "targets": {
@@ -16,8 +16,8 @@
     "watch": "^1.0.2"
   },
   "logseq": {
-    "id": "logspot-whatsapp",
-    "title": "Whatsapp Integration",
+    "id": "loglink",
+    "title": "LogLink Integration",
     "icon": "./icon.png"
   },
   "devDependencies": {
