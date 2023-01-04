@@ -4,14 +4,14 @@
 
 Loglink allows you to send data to your LogSeq graph from a variety of sources.
 
-Currently integrated:
+Functioning integrations:
 - Telegram
-- WhatsApp
+- WhatsApp (invite only at the moment)
 
-Planned:
+Planned integrations:
 - Email
-- Discord
-- Twitter
+- Discord (maybe)
+- Slack (maybe)
 
 
 ## Usage
