@@ -1,5 +1,7 @@
 ## LogLink integration
 
+** NOTE: This project is under development (as of 4 Jan 2023) and not yet available for testing. If you want to sign up for the beta you can [here](https://5agez8udocf.typeform.com/to/Mlsi9lR7) **
+
 Loglink allows you to send data to your LogSeq graph from a variety of sources.
 
 Currently integrated:
@@ -7,7 +9,6 @@ Currently integrated:
 - WhatsApp
 
 Planned:
-- Telegram
 - Email
 - Discord
 - Twitter
