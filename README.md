@@ -8,8 +8,7 @@ You can read all about LogLink at [https://loglink.it](https://loglink.it)
 
 Quick demo:
 
-https://user-images.githubusercontent.com/25515609/209876700-e77ef220-0504-4bd1-8f4d-cb1712aeb5a7.mp4
-
+![](plugin_demo.gif)
 
 ## Integrations
 
