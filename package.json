@@ -1,6 +1,6 @@
 {
   "name": "loglink-integration",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "Allows you to add to your LogSeq graph from LogLink",
   "author": "hankhank10",
   "main": "dist/index.html",
