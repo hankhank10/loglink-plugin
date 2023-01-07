@@ -5,6 +5,7 @@ import {settingUI} from './setting';
 const pluginId = PL.id;
 const pluginName = "LogLink plugin: "
 
+let pluginVersion = '0.0.0';
 
 /* function to fetch data from LogLink */
 async function loadRemoteData() {
@@ -44,7 +45,8 @@ async function loadRemoteData() {
 		let userID = logseq.settings["loglink_token_" + i];
 
 		let object_to_send = {
-			'user_id': userID
+			'user_id': userID,
+			'plugin_version': pluginVersion
 		}
 
 		console.log(pluginName, "fetching data from ", endpoint)
@@ -62,8 +64,6 @@ async function loadRemoteData() {
 		let status = await response.status;
 
 		console.log(pluginName, "returned status code", status)
-
-		console.log(data.messages)
 
 		if (status === 200) {
 			let messages = data.messages.contents;
@@ -135,14 +135,17 @@ async function displayRemoteData() {
 /* main */
 const main = async () => {
 
+	// Get the version number
+	try {
+		let pjson = require('../package.json');
+		pluginVersion = pjson.version;
+		console.log(pluginName, "You are running version", pluginVersion, " of the LogLink plugin for Logseq.");
+	} catch (e) {
+		console.log(pluginName, "Error getting plugin version number.")
+		pluginVersion = '0.0.0';
+	}
+
 	settingUI(); /* -setting */
-	console.info(`
-		#$
-		{
-			pluginId
-		}
-	:
-		main`); /* -plugin-id */
 
 	logseq.Editor.registerSlashCommand('🔄 LogLink messages', async () => {
 			displayRemoteData()
@@ -154,14 +157,7 @@ const main = async () => {
 			logseq.UI.showMsg('🔄LogLink integration')
 		}
 	);
-	
-	console.info(`
-		#$
-		{
-			pluginId
-		}
-	:
-		loaded`);
+
 }/* end_main */
 
 
