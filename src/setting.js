@@ -29,6 +29,13 @@ export const settingUI = () => {
             description: "If you have self-deployed LogLink to your own server then enter the base URL below. If not, then leave this blank.",
             default: ""
         },
+        {
+            key: "check_for_latest_version",
+            type: "boolean",
+            title: "Check for latest version",
+            description: "By default, the plugin checks if it is out of date and notifies you. If you would prefer not to be notified, then uncheck this box.",
+            default: true
+        }
     ];
     logseq.useSettingsSchema(settingsTemplate);
 };

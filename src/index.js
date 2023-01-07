@@ -46,7 +46,10 @@ async function loadRemoteData() {
 
 		let object_to_send = {
 			'user_id': userID,
-			'plugin_version': pluginVersion
+		}
+
+		if (logseq.settings['check_for_latest_version']) {
+			object_to_send['plugin_version'] = pluginVersion;
 		}
 
 		console.log(pluginName, "fetching data from ", endpoint)
