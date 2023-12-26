@@ -1,6 +1,6 @@
 # LogLink Plugin
     
-**NOTE: This project is under development (as of 26 Dec 2024) only available in closed beta. If you want to sign up for the beta you can [here](https://form.jotform.com/230035811319043)**
+**NOTE: This project is under development (as of 26 Dec 2023) only available in closed beta. If you want to sign up for the beta you can [here](https://form.jotform.com/230035811319043)**
 
 LogLink allows you to add to your Obsidian or LogSeq graph more easily from a variety of sources, with a focus on mobile.
 
